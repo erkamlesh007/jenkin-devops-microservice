@@ -37,7 +37,8 @@ pipeline {
         }
         stage('Build Docker Image') {
             steps {
-              dockerImage=docker.build("replykamlesh24/currency-exchange-devops:${env.BUILD_TAG}")
+               echo 'build docker image'
+              // dockerImage=docker.build("replykamlesh24/currency-exchange-devops:${env.BUILD_TAG}")
             }
         }
     }
