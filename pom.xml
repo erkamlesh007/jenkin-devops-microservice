@@ -216,12 +216,7 @@
 			<!--</configuration> -->
 			<!--</plugin> -->
 		</plugins>
-
-		<configuration>
-			<excludes>
-				<exclude>java/sql/SQLException</exclude>
-			</excludes>
-		</configuration>
+		
 	</build>
 
 	<repositories>
