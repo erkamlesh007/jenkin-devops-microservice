@@ -38,9 +38,15 @@ pipeline {
         stage('Build Docker Image') {
             steps {
                 script{
-                    dockerImage=docker.build("replykamlesh24/currency-exchange-devops:${env.BUILD_TAG}")
+                    //dockerImage=docker.build("replykamlesh24/currency-exchange-devops:${env.BUILD_TAG}")
                 } 
             }
+        }
+        stage('Package') {
+            steps {
+                //sh "mvn package -DskipTests" 
+            }
+        }
         stage('Push Docker Image') {
             steps {
                 script{
