@@ -38,9 +38,9 @@ pipeline {
         stage('Build Docker Image') {
             steps {
                  echo 'build image'
-                script{
+               // script{
                     //dockerImage=docker.build("replykamlesh24/currency-exchange-devops:${env.BUILD_TAG}")
-                } 
+              //  } 
             }
         }
         stage('Package') {
@@ -52,11 +52,11 @@ pipeline {
         stage('Push Docker Image') {
             steps {
              echo 'push'
-                script{
-                     docker.withRegistry('','dockerhub'){
+               // script{
+                  //   docker.withRegistry('','dockerhub'){
                         // dockerImage.push();
                         // dockerImage.push('latest');
-                     }
+                  //   }
                   
                 } 
             }
