@@ -37,6 +37,7 @@ pipeline {
         }
         stage('Build Docker Image') {
             steps {
+                 echo 'build image'
                 script{
                     //dockerImage=docker.build("replykamlesh24/currency-exchange-devops:${env.BUILD_TAG}")
                 } 
@@ -44,11 +45,13 @@ pipeline {
         }
         stage('Package') {
             steps {
+             echo 'package'
                 //sh "mvn package -DskipTests" 
             }
         }
         stage('Push Docker Image') {
             steps {
+             echo 'push'
                 script{
                      docker.withRegistry('','dockerhub'){
                         // dockerImage.push();
