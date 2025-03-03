@@ -35,5 +35,10 @@ pipeline {
                echo "Integration Test"
             }
         }
+        stage('Build Docker Image') {
+            steps {
+              dockerImage=docker.build("replykamlesh24/currency-exchange-devops:${env.BUILD_TAG}")
+            }
+        }
     }
 }
